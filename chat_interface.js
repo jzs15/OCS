@@ -1,7 +1,7 @@
 var company_code = '000000'
 var ifm = document.createElement('iframe');
 document.body.appendChild(ifm);
-ifm.src = "/toolbar_chat";
+ifm.src = "/toolbar_chat/" + company_code;
 ifm.className = "suspend";
 ifm.style.width = "40px";
 ifm.style.height = "198px";
@@ -13,14 +13,14 @@ ifm.style.position = "fixed";
 ifm.overflow = "hidden";
 
 
-function open_chat() {
-    window.open("/chat/"+company_code, "chat", "width = 650px, height = 502px");
+function open_chat(code) {
+    window.open("/chat/" + code, "chat", "width = 650px, height = 502px");
 }
 
-function ifm_chat() {
+function ifm_chat(code) {
     var ifm2 = document.createElement('iframe');
     parent.document.body.appendChild(ifm2);
-    ifm2.src = "chat";
+    ifm2.src = "/chat/" + code;
     ifm2.frameBorder = "0";
     ifm2.id = "ifm_chat";
     ifm2.width = "650px";
@@ -52,11 +52,11 @@ function init_data() {
         params = sc[i].src;
         if (params != "") {
             var params = sc[i].src.split('?')[0];
-            alert(params.substring(params.length - 17))
             if (params.substring(params.length - 17) === "chat_interface.js") {
                 var params_arr = sc[i].src.split('?')[1];
             }
         }
     }
     company_code = params_arr.split('=')[1];
+    ifm.src = "/toolbar_chat/" + company_code;
 }
