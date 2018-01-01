@@ -45,20 +45,19 @@ $(document).ready(function () {
 });
 
 function init_data() {
-
-		var sc=document.getElementsByTagName('script');
-		var paramsA;
-		for(var i=0;i<sc.length;i++){
-			paramsA = sc[i].src;
-			if(paramsA!=""){
-				var paramsA=sc[i].src.split('?')[0];
-				alert(paramsA.substring(paramsA.length-17))
-				if(paramsA.substring(paramsA.length-17) == "chat_interface.js"){
-					var paramsArr=sc[i].src.split('?')[1];
-				}
-			}
-		}
-		company_code = paramsArr.split('=')[1];
-   alert(company_code);
+    var sc = document.getElementsByTagName('script');
+    var params;
+    for (var i = 0; i < sc.length; i++) {
+        params = sc[i].src;
+        if (params != "") {
+            var params = sc[i].src.split('?')[0];
+            alert(params.substring(paramsA.length - 17))
+            if (params.substring(paramsA.length - 17) === "chat_interface.js") {
+                var params_arr = sc[i].src.split('?')[1];
+            }
+        }
+    }
+    company_code = params_arr.split('=')[1];
+    alert(company_code);
 
 }
