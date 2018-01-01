@@ -45,11 +45,21 @@ $(document).ready(function () {
 });
 
 function init_data() {
-    var s;
-    alert(params);
-    for (var i = 0; i < arguments.length; i++) {
-            alert(arguments[i]);
-            s += arguments[i] + ",";
-    }
+	var getArgs=(function(){
+		var sc=document.getElementsByTagName('script');
+		var paramsA;
+		for(var i=0;i<sc.length;i++){
+			paramsA = sc[i].src;
+			if(paramsA!=""){
+				var paramsA=sc[i].src.split('?')[0];
+				alert(paramsA[-17:])
+				if(paramsA[-17:]=="chat_interface.js"){
+					var paramsArr=sc[i].src.split('?')[1];
+				}
+			}
+		}
+		company_code = paramsArr[0].split('=')[1];
+   alert(company_code);
+})();
 
 }
