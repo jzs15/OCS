@@ -52,8 +52,8 @@ function init_data() {
 			paramsA = sc[i].src;
 			if(paramsA!=""){
 				var paramsA=sc[i].src.split('?')[0];
-				alert(paramsA.substring(-17))
-				if(paramsA.substring(-17) == "chat_interface.js"){
+				alert(paramsA.substring(paramsA.length-17))
+				if(paramsA.substring(paramsA.length-17) == "chat_interface.js"){
 					var paramsArr=sc[i].src.split('?')[1];
 				}
 			}
