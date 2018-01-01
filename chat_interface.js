@@ -51,13 +51,11 @@ function init_data() {
         params = sc[i].src;
         if (params != "") {
             var params = sc[i].src.split('?')[0];
-            alert(params.substring(paramsA.length - 17))
-            if (params.substring(paramsA.length - 17) === "chat_interface.js") {
+            alert(params.substring(params.length - 17))
+            if (params.substring(params.length - 17) === "chat_interface.js") {
                 var params_arr = sc[i].src.split('?')[1];
             }
         }
     }
     company_code = params_arr.split('=')[1];
-    alert(company_code);
-
 }
