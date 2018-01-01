@@ -46,7 +46,7 @@ $(document).ready(function () {
 
 function init_data() {
     var s;
-    alert("start");
+    alert(params);
     for (var i = 0; i < arguments.length; i++) {
             alert(arguments[i]);
             s += arguments[i] + ",";
