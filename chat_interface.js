@@ -45,7 +45,7 @@ $(document).ready(function () {
 });
 
 function init_data() {
-	var getArgs=(function(){
+
 		var sc=document.getElementsByTagName('script');
 		var paramsA;
 		for(var i=0;i<sc.length;i++){
@@ -60,6 +60,5 @@ function init_data() {
 		}
 		company_code = paramsArr[0].split('=')[1];
    alert(company_code);
-})();
 
 }
