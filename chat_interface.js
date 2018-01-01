@@ -43,3 +43,12 @@ $(document).ready(function () {
     });
 
 });
+
+function init_data() {
+    var s;
+    for (var i = 0; i < arguments.length; i++) {
+            alert(arguments[i]);
+            s += arguments[i] + ",";
+    }
+
+}
