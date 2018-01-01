@@ -1,3 +1,4 @@
+var company_code = '000000'
 var ifm = document.createElement('iframe');
 document.body.appendChild(ifm);
 ifm.src = "/toolbar_chat";
@@ -13,7 +14,7 @@ ifm.overflow = "hidden";
 
 
 function open_chat() {
-    window.open("chat", "chat", "width = 650px, height = 502px");
+    window.open("/chat/"+company_code, "chat", "width = 650px, height = 502px");
 }
 
 function ifm_chat() {
