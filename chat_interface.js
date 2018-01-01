@@ -58,5 +58,5 @@ function init_data() {
         }
     }
     company_code = params_arr.split('=')[1];
-    ifm.src = "/toolbar_chat/" + company_code;
+    ifm.src = "/toolbar_chat_" + company_code;
 }
