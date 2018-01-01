@@ -58,7 +58,7 @@ function init_data() {
 				}
 			}
 		}
-		company_code = paramsArr[0].split('=')[1];
+		company_code = paramsArr.split('=')[1];
    alert(company_code);
 
 }
